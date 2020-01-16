@@ -1,0 +1,308 @@
+@layout('layout.default')
+@section('content')
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+      <!--      Wizard container        -->
+      <div class="wizard-container">
+        <div class="card wizard-card" data-color="orange" id="wizardProfile">
+          <form id="cv-form" action="" method="">
+
+            <div class="wizard-header">
+              <h3>
+                <b>BUILD</b> YOUR OWN CV  <br>
+                <small>Information about you.</small>
+              </h3>
+            </div>
+
+            <div class="wizard-navigation">
+              <ul>
+                <li><a href="#info" data-toggle="tab" data-text="Information about you.">Personal Info</a></li>
+                <li><a href="#job" data-toggle="tab" data-text="Information about your job application.">Job Application</a></li>
+                <li><a href="#education" data-toggle="tab" data-text="Information about your education.">Education</a></li>
+                <li><a href="#work" data-toggle="tab" data-text="Information about your work experience.">Work experience</a></li>
+                <li><a href="#skills" data-toggle="tab" data-text="Information about your personal skills.">Personal Skills</a></li>
+              </ul>
+
+            </div>
+
+            <div class="tab-content">
+              <div class="tab-pane" id="info">
+                <div class="row">
+                  <h4 class="info-text"> Basic Information</h4>
+                  <div class="col-sm-4 col-sm-offset-1">
+                    <div class="picture-container">
+                      <div class="picture">
+                        <img src="default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
+                        <input type="file" id="wizard-picture">
+                      </div>
+                      <h6>Choose Picture</h6>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label>First Name <small>(required)</small></label>
+                      <input name="firstname" type="text" class="form-control" placeholder="Marina...">
+                    </div>
+                    <div class="form-group">
+                      <label>Last Name <small>(required)</small></label>
+                      <input name="lastname" type="text" class="form-control" placeholder="Gjorgjievski...">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Email <small>(required)</small></label>
+                      <input name="email" type="email" class="form-control" placeholder="marince.50@gmail.com">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Date of birth <small>(required)</small></label>
+                      <input name="birth" type="Date" class="form-control" placeholder="08/11/2020">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Gender <small>(required)</small></label><br>
+                      <form action="">
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <input type="radio" name="gender" value="other"> Other
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Mobile phone <small>(required)</small></label>
+                      <input name="phone" type="Number" class="form-control" placeholder="2658006542">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Street address <small>(required)</small></label>
+                      <input name="address" type="text" class="form-control" placeholder="8-ma Veleska brigada br.7">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>City <small>(required)</small></label>
+                      <input name="city" type="text" class="form-control" placeholder="Veles">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Country <small>(required)</small></label>
+                      <input name="country" type="text" class="form-control" placeholder="Macedonia">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="job">
+                <h4 class="info-text"> Applied For: </h4>
+                <div class="row">
+
+                  <div class="col-sm-12 centered">
+                    <div class="col-sm-5">
+                      <div class="form-group">
+                        <label>Position</label>
+                        <select class="form-control">
+                          <option disabled="" selected="">- type of position-</option>
+                          <option>Financial Manager</option>
+                          <option>Accountant</option>
+                          <option>Speech-Language Pathologist</option>
+                          <option>Podiatrist</option>
+                          <option>Clinical Laboratory Technician</option>
+                          <option>Physical Therapist</option>
+                          <option>Registered Nurse</option>
+                          <option>Cartographer</option>
+                          <option>Mathematician</option>
+                          <option>Nurse Midwife</option>
+                          <option>Surgeon (tie)</option>
+                          <option>Anesthesiologist (tie)</option>
+                          <option>Occupational Therapist</option>
+                          <option>Physician (tie)</option>
+                          <option>Prosthodontist (tie)</option>
+                          <option>Oral and Maxillofacial Surgeon (tie)</option>
+                          <option>Obstetrician and Gynecologist (tie)</option>
+                          <option>Pediatrician</option>
+                          <option>Nurse Practitioner</option>
+                          <option>Nurse Anesthetist (tie)</option>
+                          <option>Orthodontist (tie)</option>
+                          <option>Dentist</option>
+                          <option>Physician Assistant</option>
+                          <option>Statistician</option>
+                          <option>Software Engineer</option>
+                          <option>Engineer</option>
+                          <option>Teacher / Faculty / Tutor / Instructor</option>
+                          <option>Writer</option>
+                          <option>Consultant</option>
+                          <option>Program Manager</option>
+                          <option>Project Manager</option>
+                          <option>Customer Service Representative</option>
+                          <option>Business Development Manager</option>
+                          <option>Account Manager / Account Executive</option>
+                          <option>Recruiter</option>
+                          <option>Sales Representative</option>
+                          <option>Web Developer</option>
+                          <option>Medical Coder</option>
+                          <option>Territory Sales Manager</option>
+                          <option>Data Analyst</option>
+                          <option>Editor</option>
+                          <option>Case Manager</option>
+                          <option>UX/UI Designer</option>
+                          <option>IT Program Manager</option>
+                          <option>Solutions Architect</option>
+                          <option>Babysitter</option>
+                          <option>Cloud Engineer</option>
+                          <option>Branch Manager.</option>
+                          <option>Computer and Information Research Scientist</option>
+                          <option>Network Administrator</option>
+                          <option>Customer Support Specialist</option>
+                          <option>Database Administrator</option>
+                          <option>Systems Designer</option>
+                          <option>Senior Programmer</option>
+                          <option>SEO Consultant</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="education">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <h4 class="info-text"> Type of education</h4>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Type of Education</label><br>
+                      <select name="country" class="form-control">
+                        <option disabled="" selected="">- education -</option>
+                        <option value="Afghanistan"> High School </option>
+                        <option value="Albania"> Collage </option>
+                        <option value="Algeria"> Master </option>
+                        <option value="American Samoa"> Doctor </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Name of education</label>
+                      <div class="form-group">
+                        <input name="education" type="text" class="form-control" placeholder="Computer science, physiotherapist...">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Certificates</label>
+                      <div class="form-group">
+                        <input name="certificate" type="text" class="form-control" placeholder="MCSA: SQL, cyber security...">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label> Main subjects / occupational skills covered </label>
+                      <textarea class="form-control" placeholder="" rows="9"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="work">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <h4 class="info-text"> Work experience</h4>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Company Name <small>(required)</small></label>
+                      <input name="companyName" type="text" class="form-control" placeholder="Amazon,Facebook...">
+                    </div>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>From  <small>(required)</small></label>
+                      <input name="from" type="Date" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label>To <small>(required)</small></label>
+                      <input name="to" type="Date" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Position<small>(required)</small></label>
+                      <input name="position" type="text" class="form-control" placeholder="Quality Ingener, Shift Leader...">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label> Main subjects / occupational skills covered </label>
+                      <textarea class="form-control" placeholder="" rows="9"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button class='btn btn-fill btn-warning btn-wd btn-sm' id=addBtn>Add Experience</button>
+
+<!--                <p id="demo"></p>-->
+
+              </div>
+              <div class="tab-pane" id="skills">
+                <div class="row">
+
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <h4 class="info-text"> Personal skills</h4>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Mother Language: <small>(required)</small></label>
+                      <input name="m-language" type="text" class="form-control" placeholder="Macedonian, Greek, Italian...">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label>Foreign Language: <small>(required)</small></label>
+                      <input name="f-language" type="text" class="form-control" placeholder="English, Spanish, Chroatian">
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label> Communication Skills: </label>
+                      <textarea class="form-control" placeholder="" rows="9"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-sm-10 col-sm-offset-1">
+                    <div class="form-group">
+                      <label> Organisational/Managerial Skills: </label>
+                      <textarea class="form-control" placeholder="" rows="9"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wizard-footer height-wizard">
+              <div class="pull-right">
+                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
+                <input type='button' class='btn btn-finish btn-fill btn-success btn-wd btn-sm' name='download' value='Download' />
+              </div>
+
+              <div class="pull-left">
+                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+          </form>
+        </div>
+      </div> <!-- wizard container -->
+    </div>
+  </div><!-- end row -->
+</div> <!--  big container -->
+
+@endsection

@@ -1,0 +1,11 @@
+.logo-container{
+    left: 50px;
+    position: absolute;
+    top: 20px;
+    z-index: 3;
+}
+.logo-container .logo{
+    overflow: hidden;
+    border-radius: 50px;
+    float: left;
+}

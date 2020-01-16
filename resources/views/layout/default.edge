@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/css/gsdk-bootstrap-wizard.css" rel="stylesheet" />
+  <link href="/css/demo.css" rel="stylesheet" />
+  <title>CV Generator</title>
+</head>
+<body>
+  <div class="logo-container">
+    <div class="logo">
+      <img src="logo.png">
+    </div>
+  </div>
+  <div class="btn-login-register">
+    <a href="{{ route('/') }}" type="button" class="btn btn-warning-1">Home</a>
+    <a href="{{ route('auth.sign-in') }}" type="button" class="btn btn-warning-1">Sign In</a>
+    <a href="{{ route('auth.register') }}" type="button" class="btn btn-warning-1">Register</a>
+  </div>
+  <div class="container">
+    @!section('content')
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      Made with <i class="fa fa-heart heart"></i> by Marina
+    </div> <br>
+  </div>
+
+  <script src="/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+  <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+  <script src="/js/gsdk-bootstrap-wizard.js"></script>
+  <script src="/js/jquery.validate.min.js"></script>
+  <script>
+    $('.wizard-navigation a').click(function(){
+      if ($('#cv-form').valid()) {
+        $('.wizard-header small').text($(this).data('text'));
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("addBtn").addEventListener("click", addWork);
+
+    function addWork(e) {
+      e.preventDefault();
+
+      var str = "<div class='col-sm-10 col-sm-offset-1'><h4 class='info-text'> Work experience</h4></div><div class='col-sm-10 col-sm-offset-1'><div class='form-group'><label>Company Name <small>(required)</small></label><input name='companyName' type='text' class='form-control' placeholder='Marquardt,Facebook...'></div></div><div class='col-sm-5 col-sm-offset-1'><div class='form-group'><label>From  <small>(required)</small></label><input name='from' type='Date' class='form-control' placeholder='08/11/2020'></div></div><div class='col-sm-5'><div class='form-group'><label>To <small>(required)</small></label><input name='to' type='Date' class='form-control' placeholder='08/11/2020'></div></div><div class='col-sm-10 col-sm-offset-1'><div class='form-group'><label>Position<small>(required)</small></label><input name='position' type='text' class='form-control' placeholder='Quality Ingener, Shift Leader...'></div></div><div class='col-sm-10 col-sm-offset-1'><div class='form-group'><label> Main subjects / occupational skills covered </label><textarea class='form-control' placeholder='' rows='9'></textarea></div></div>";
+
+      document.querySelector("#work .row").insertAdjacentHTML( 'beforeend', str );
+    }
+  </script>
+</body>
+</html>
